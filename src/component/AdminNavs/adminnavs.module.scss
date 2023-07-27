@@ -1,3 +1,5 @@
+@import '@/component/style/config.module.scss';
+
 .adminNavs{
   display: flex; 
   height: var(--header-height);
@@ -21,7 +23,8 @@
     left: 0;
     top: var(--header-height);
     width: 100%;
-    background-color: var(--light);
+    background-color: var(--navbar-bg);
+    color: var(--text-lightest);
     height: 0;
     overflow: hidden;
     transition: height ease-in 0.15s;
@@ -33,16 +36,14 @@
     .wrapper{
       display: flex;
       flex-flow: column;
-      align-items: flex-end;
-      padding: 0 25px 40px 25px;
+      padding: 10px 25px 40px 25px;
       height: 50vh;
     }
 
     .labelText{
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
-      color: var(--secondary);
-      margin-bottom: 11px;
+      margin-bottom: 12px;
     }
 
     .userLink{
@@ -51,32 +52,86 @@
       gap: 9px;
 
       .icon{
-        height: 30px;
-        width: 30px;
+        height: 28px;
+        width: 28px;
+        path{
+          fill: var(--light)
+        }
       }
     }
 
     .username{
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 500;
       text-decoration: underline;
-      color: var(--secondary);
     }
 
     .linkStyle{
-      display: block;
-      font-size: 24px;
-      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      color: var(--text-lightest);
       background: transparent;
-      padding: 10px 14px;
-      margin-bottom: 25px;
+      padding: 0 6px;
+      height: 50px;
+      margin-bottom: 20px;
       border-radius: 12px;
       transition: all ease-in-out 0.15s;
 
       &.active{
-        background: var(--secondary);
-        color: var(--text-lightest);
+        background: var(--light);
+        color: var(--secondary);
         font-weight: 700;
+      }
+
+      &:hover{
+        background: var(--light);
+        color: var(--secondary);
+      }
+    }
+  }
+
+  @media screen and (min-width: $br-small) {
+    .linkNavs{
+      position: fixed;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: var(--navbar-desktop-width);
+      top:0;
+      left: 0;
+      background: var(--navbar-bg);
+      padding: 30px 45px;
+
+      .labelText{
+        font-size: 24px;
+        line-height: normal;
+        margin-bottom: 9px;
+        margin-top: 78px;
+      }
+
+      .linkContainer{
+        height: max-content;
+        position: relative;
+        top: 0;
+
+        .wrapper{
+          height: max-content;
+          padding: 0;
+        }
+        .linkStyle{
+          font-size: 26px;
+          height: 75px;
+          padding: 0 12px;
+          margin-bottom: 25px;
+          transition: all ease-in-out 0.15s;
+    
+          &.active{
+            background: var(--light);
+            color: var(--secondary);
+            font-weight: 700;
+          }
+        }
       }
     }
   }

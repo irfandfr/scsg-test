@@ -27,7 +27,9 @@ export default function AdminNavs(){
         </button>
         <LinkContainer links={links} open={openNav} />
       </div>
-      <div className={styles.headerNav}></div>
+      <div className={`${styles.headerNav} md-hide`}>
+        
+      </div>
     </nav>
   )
 }
