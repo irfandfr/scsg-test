@@ -1,0 +1,19 @@
+.logoContainer{
+  display: flex;
+  
+  .circle1{
+    width: 33px;
+    height: 33px;
+    border-radius: 1000px;
+    border: solid 2.36px var(--light);
+    background-color: var(--secondary);
+  }
+  .circle2{
+    width: 11.79px;
+    height: 11.79px;
+    border-radius: 1000px;
+    border: solid 2.36px var(--light);
+    background-color: var(--danger);
+    margin-left: 2.36;
+  }
+}
