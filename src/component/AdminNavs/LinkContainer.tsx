@@ -10,6 +10,7 @@ interface LinkContainerProp{
     link: string
     title: string
     exact?:boolean
+    icon?: React.ReactNode
   }[]
   open: boolean
 }
@@ -18,11 +19,13 @@ interface NavLinkProp{
   link: string
   title: string
   active:boolean
+  icon?: React.ReactNode
 }
 
-const NavLink = ({link, title, active} : NavLinkProp) => {
+const NavLink = ({link, title, active, icon} : NavLinkProp) => {
   return(
     <Link href={link} className={`${styles.linkStyle} ${active ? styles.active : ''}`}>
+      {icon}
       {title}
     </Link>
   )
@@ -45,8 +48,8 @@ export default function LinkContainer({links, open} : LinkContainerProp){
       <div className={styles.wrapper}>
         <span className={styles.labelText}>Menu</span>
         {
-          links.map(({link, title, exact},index) => 
-            <NavLink key={'link'+index} link={link} title={title} active={isActiveLink(exact,link)} />
+          links.map(({link, title, exact, icon},index) => 
+            <NavLink key={'link'+index} link={link} title={title} active={isActiveLink(exact,link)} icon={icon} />
           )
         }
         <div className={`${styles.userLink} md-hide`} style={{marginTop: 'auto'}}>
