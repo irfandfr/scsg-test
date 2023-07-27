@@ -1,3 +1,5 @@
+$br-small: 576px;
+
 :root {
   --max-width: 1100px;
   --border-radius: 10px;
@@ -46,4 +48,12 @@ a {
 button{
   all: unset;
   cursor: pointer;
+}
+
+//hide element on medium or higher screen size (higher than 576px)
+.md-hide{
+  visibility: visible;
+  @media screen and (min-width: $br-small) {
+    visibility: hidden;
+  }
 }
