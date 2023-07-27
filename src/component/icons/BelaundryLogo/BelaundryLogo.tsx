@@ -5,6 +5,7 @@ export default function BelaundryLogo(){
     <div className={styles.logoContainer}>
       <div className={styles.circle1}></div>
       <div className={styles.circle2}></div>
+      <h3 className={styles.titleText}>BeLaundry</h3>
     </div>
    )
 }
