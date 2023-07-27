@@ -1,0 +1,31 @@
+.burgerMenu{
+  box-sizing: border-box;
+  height: 36px;
+  width: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 6px 4px;
+  border-radius: 4px;
+  background-color: var(--accent);
+
+  .bar{
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 3px;
+    transition: transform ease-in-out 0.15s
+  }
+
+  &.active{
+    .bar1{
+      transform: translateY(10px) rotate(45deg);
+    }
+    .bar2{
+      transform: rotate(45deg);
+    }
+    .bar3{
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
