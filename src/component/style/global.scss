@@ -7,6 +7,9 @@ $br-small: 576px;
   // ADMIN VARIABLES
   --header-height: 68px;
   
+  //Z-INDEXES
+  --z-header: 10;
+  --z-nav-links: 8;
 
   // COLOR VARIABLES
   --background: #E7F5FD;
@@ -32,7 +35,6 @@ $br-small: 576px;
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
