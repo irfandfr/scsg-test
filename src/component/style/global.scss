@@ -23,7 +23,8 @@ $br-small: 768px;
   --light: #FFFFFF;
 
   --text-darkest: #000;
-  --text-darker: #535353;
+  --text-darker: ##303030;
+  --text-dark: #535353;
   --text-neutral: #B2C5D4;
   --text-lighter: #EAEAEA;
   --text-lightest: #fff;
@@ -59,5 +60,11 @@ button{
   display: inherit;
   @media screen and (min-width: $br-small) {
     display: none!important;
+  }
+}
+.md-show{
+  display: none;
+  @media screen and (min-width: $br-small) {
+    display: inherit;
   }
 }

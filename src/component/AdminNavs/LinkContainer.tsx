@@ -22,6 +22,7 @@ interface NavLinkProp{
   icon?: React.ReactNode
 }
 
+//individual link components
 const NavLink = ({link, title, active, icon} : NavLinkProp) => {
   return(
     <Link href={link} className={`${styles.linkStyle} ${active ? styles.active : ''}`}>
@@ -34,7 +35,7 @@ const NavLink = ({link, title, active, icon} : NavLinkProp) => {
 
 export default function LinkContainer({links, open} : LinkContainerProp){
   const pathname = usePathname()
-
+  
   function isActiveLink(exact:boolean|undefined, link: string){
     if(exact){
       return link === pathname

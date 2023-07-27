@@ -153,5 +153,43 @@
         }
       }
     }
+
+    .headerNav{
+      position: fixed;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      left: var(--navbar-desktop-width);
+      width: calc(100vw - $navbar-desktop-width);
+      height: $header-desktop-height;
+      background: var(--light);
+      padding: 0 26px 0 $gap-from-navbar;
+
+      h1{
+        font-size: 41.549px;
+        font-weight: 700;
+        letter-spacing: 3.116px;
+        color: var(--text-darker);
+      }
+      .userLink{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+          height: 39px;
+        }
+
+        .username{
+          display: inline-block;
+          font-size: 26px;
+          font-weight: 500;
+          text-decoration: underline;
+          color: var(--secondary);
+          margin-left: 9px;
+        }
+      }
+    }
   }
 }
