@@ -7,9 +7,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <MainAdminContainer>
+    <>
       <AdminNavs />
-      {children}
-    </MainAdminContainer>
+      <MainAdminContainer>
+        {children}
+      </MainAdminContainer>
+    </>
   )
 }

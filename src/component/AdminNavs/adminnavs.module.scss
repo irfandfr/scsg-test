@@ -107,6 +107,7 @@
   }
 
   @media screen and (min-width: $br-small) {
+    height: 0;
     .linkNavs{
       position: fixed;
       flex-flow: column;

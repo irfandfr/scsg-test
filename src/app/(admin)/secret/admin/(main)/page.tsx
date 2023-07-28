@@ -1,7 +1,11 @@
+import AdminCard from "@/component/AdminCard/AdminCard";
+
 export default function AdminHome(){
   return(
     <>
-      a
+      <AdminCard>
+        abaca
+      </AdminCard>
     </>
   )
 }
