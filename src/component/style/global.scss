@@ -1,0 +1,70 @@
+$br-small: 768px;
+
+:root {
+  --max-width: 1200px;
+  --border-radius: 10px;
+  
+  // ADMIN VARIABLES
+  --header-height: 68px;
+  --navbar-desktop-width: 310px;
+  
+  //Z-INDEXES
+  --z-header: 10;
+  --z-nav-links: 8;
+
+  // COLOR VARIABLES
+  --background: #E7F5FD;
+  --accent: #CAECFF;
+  --primary: #2D9CDB;
+  --secondary: #0099EE;
+  --navbar-bg: #3B97CB;
+  --success: #56E4A0;
+  --danger: #F36868;
+  --light: #FFFFFF;
+
+  --text-darkest: #000;
+  --text-darker: #303030;
+  --text-dark: #535353;
+  --text-neutral: #B2C5D4;
+  --text-lighter: #EAEAEA;
+  --text-lightest: #fff;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: var(--text-darkest);
+  background: var(--background)
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+}
+
+//hide element on medium or higher screen size (higher than 576px)
+.md-hide{
+  display: inherit;
+  @media screen and (min-width: $br-small) {
+    display: none!important;
+  }
+}
+.md-show{
+  display: none;
+  @media screen and (min-width: $br-small) {
+    display: inherit;
+  }
+}
