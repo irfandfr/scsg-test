@@ -4,7 +4,7 @@ import styles from './selectform.module.scss'
 interface SelectFormProp {
   value?: number | string;
   label?: string;
-  onChange?: (event: React.FormEvent<HTMLSelectElement> | undefined) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   ref?: React.LegacyRef<HTMLSelectElement>;
   placeholder?: string;
   className?: string;
