@@ -33,6 +33,7 @@ interface BarChartProp{
 export default function BarChart({datas, title} : BarChartProp){
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top' as const,
@@ -63,6 +64,8 @@ export default function BarChart({datas, title} : BarChartProp){
         label: 'Sales',
         data: datas.map(data => {return {label: data.label, income: data.value, totalItem: data.totalItem}}),
         backgroundColor: '#B2C5D4',
+        hoverBackgroundColor: '#3E7DAB',
+        borderRadius: 5,
         parsing: {
           xAxisKey: 'label',
           yAxisKey: 'income',
@@ -70,7 +73,6 @@ export default function BarChart({datas, title} : BarChartProp){
       }
     ],
   };
- return(
-      <Bar options={options} data={data}/>
- ) 
+  
+ return(<Bar options={options} data={data}/>) 
 }
