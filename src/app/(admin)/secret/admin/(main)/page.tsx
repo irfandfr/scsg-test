@@ -1,11 +1,9 @@
-import AdminCard from "@/component/AdminCard/AdminCard";
+import SalesStatisticTable from "./SalesStatisticTable";
 
 export default function AdminHome(){
   return(
     <>
-      <AdminCard>
-        abaca
-      </AdminCard>
+      <SalesStatisticTable />
     </>
   )
 }
