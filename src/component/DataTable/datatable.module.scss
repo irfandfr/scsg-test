@@ -2,6 +2,9 @@
   width: 100%;
   padding: 15px 25px;
 
+  .wrapper{
+    overflow: auto;
+  }
   .dataTable{
     width: 100%;
     color: var(--text-dark);
