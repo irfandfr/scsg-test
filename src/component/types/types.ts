@@ -3,3 +3,9 @@ export interface IconProps{
   width?:number
   className?:string
 }
+
+export interface ReportProps{
+  created_at: string
+  total: number
+  income: string
+}
