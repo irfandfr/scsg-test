@@ -1,7 +1,7 @@
 import { IconProps } from "@/component/types/types";
 
 
-export default function MessageIcon({className}:IconProps){
+export default function ChevronIcon({className}:IconProps){
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
