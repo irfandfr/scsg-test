@@ -44,7 +44,7 @@ export default function ProductTable(){
   return(
     <div>
       {
-        productList.length > 0 && 
+        productList.length > 0 ? 
         <DataTable labels={Object.keys(productList[0])}>
           <DataTable.Body>
             {productList.map(product => 
@@ -59,7 +59,8 @@ export default function ProductTable(){
               </DataTable.Row>
             )}
           </DataTable.Body>
-        </DataTable>
+        </DataTable> :
+        <h5>No product data found...</h5>
       }
     </div>
   )
