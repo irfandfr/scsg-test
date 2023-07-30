@@ -9,12 +9,24 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  gap: 3px;
-  padding: 0 9px 12px 9px;
   color: var(--text-lightest);
+  flex-shrink: 0;
+  overflow: hidden;
+
+  .overlay{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    gap: 3px;
+    padding: 0 9px 12px 9px;
+    background: linear-gradient(180deg, rgba(0, 153, 238, 0.00) 0%, #3B97CB 100%);
+  }
 
   .category{
     font-size: 9px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
   .name{
     font-size: 24px;
@@ -23,5 +35,12 @@
   }
   .price{
     font-size: 20px;
+  }
+
+  .new{
+    width: 6px;
+    height: 6px;
+    background-color: var(--danger);
+    border-radius: 6px;
   }
 }
