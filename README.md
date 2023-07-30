@@ -8,7 +8,7 @@ First, run install all necessary packages:
 ```bash
 npm install
 ```
-First, run the development server:
+Second, run the development server:
 
 ```bash
 npm run dev
