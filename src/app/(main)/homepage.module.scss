@@ -119,4 +119,43 @@
     top: (-404px + 255px);
     z-index: -1;
   }
+
+  @media screen and (min-width: $br-small) {
+    overflow-x: visible;
+    margin-bottom: 80px;
+    .personal{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    &::before{
+      width: 800px;
+      height: 638px;
+      left: calc(-800px/2);
+      top: (-638px + 255px);
+    }
+
+    .section{
+      flex-grow: 1;
+      margin-top: 16px;
+      height: max-content;
+    }
+
+    .latestProduct{
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 16px;
+      left: 0;
+      padding: 0;
+    }
+
+    .section.product{
+      margin-top: 60px;
+      height: max-content;
+    }
+  }
 }
