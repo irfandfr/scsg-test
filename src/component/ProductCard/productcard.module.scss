@@ -1,0 +1,27 @@
+.productCard{
+  width: 176px;
+  height: 214px;
+  border-radius: 10px;
+  background: var(--accent);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 0 9px 12px 9px;
+  color: var(--text-lightest);
+
+  .category{
+    font-size: 9px;
+  }
+  .name{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  .price{
+    font-size: 20px;
+  }
+}
