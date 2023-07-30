@@ -18,7 +18,6 @@ export default function CategoryTags({categories, onClick, className} : Category
   }
   return(
     <>
-      <label className={styles.label}>Category</label>
       <div className={styles.categoryContainer}>
         {
           categories?.map(category => 
