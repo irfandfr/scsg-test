@@ -21,7 +21,7 @@ export default function LatestProducts() {
     AxiosGetWithToken('/platform/product').then(res =>{
       if(res.status === 200){
         if(res.data.message === "Success get all product"){
-          setProducts([...res.data.response].reverse().slice(0,6))
+          setProducts([...res.data.response].reverse())
           fetchCategories()
         }else{
           setErrorText(res.data.message)
