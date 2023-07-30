@@ -11,6 +11,7 @@ interface TextFormProp {
     ) => void;
   placeholder?: string;
   className?: string;
+  error?: string
 }
 
 export default function TextForm({
@@ -22,7 +23,8 @@ export default function TextForm({
   onChange,
   type,
   className,
-  placeholder
+  placeholder,
+  error
 }: TextFormProp) {
   return (
     <div className={`${className} ${styles.formContainer}`}>
@@ -38,6 +40,7 @@ export default function TextForm({
         name={name}
         id={id}
       />
+      <label className={styles.errorText}>{error}</label>
     </div>
   );
 }
