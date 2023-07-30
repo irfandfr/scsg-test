@@ -1,0 +1,23 @@
+@import '@/component/style/config.module.scss';
+
+.spinner{
+  width: 100%;
+  max-width: 50px;
+  aspect-ratio: 1/1;
+  border: solid 6px var(--secondary);
+  border-right-color: transparent;
+  border-radius: 1000px;
+  @include animation(speen 0.5s linear 0s infinite )
+}
+
+@keyframes speen {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

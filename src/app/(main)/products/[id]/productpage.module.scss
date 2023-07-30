@@ -1,0 +1,87 @@
+@import '@/component/style/config.module.scss';
+
+$mobile-image-height: 455px;
+
+.productPage.productPage{
+  padding: 18px;
+  .counter{
+    margin-top: 36px;
+    margin-bottom: 20px;
+  }
+  .backIcon{
+    position: absolute;
+    z-index: 1;
+    width: 59px;
+    left: 59px/2;
+  }
+  
+  .errorPage{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .productContainer{
+    padding-top: $mobile-image-height + 20px;
+    .imageContainer{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $mobile-image-height;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0px 8.522727012634277px 8.522727012634277px 0px rgba(0, 153, 238, 0.17);
+  
+      .overlay{
+        height: 213px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 153, 238, 0.00) 0%, #3B97CB 100%);
+      }
+    }
+  
+    .category{
+      padding: 7px 8px;
+      color: var(--secondary);
+      background: var(--accent);
+      border-radius: 5px;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+  
+    h1{
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 3.3px;
+      color: var(--primary);
+    }
+    h5{
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 14px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-dark);
+    }
+  }
+
+  @media screen and (min-width: $br-small) {
+    width: $br-small;
+
+    .productContainer{
+      position: relative;
+    }
+  }
+}
+
+
+

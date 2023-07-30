@@ -1,0 +1,14 @@
+@import '@/component/style/config.module.scss';
+
+.mainContainer{
+  width: 100%;
+  padding:  36px;
+  overflow: hidden;
+  max-width: 1400px;
+
+  @media screen and (min-width: $br-small) {
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
+  }
+}

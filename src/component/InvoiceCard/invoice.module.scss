@@ -1,0 +1,175 @@
+@import '@/component/style/config.module.scss';
+
+.invoiceContainer{
+  width: 100%;
+  background: var(--light);
+  border-radius: 16px;
+  overflow: hidden;
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-lightest);
+    height: 92px;
+    background-color: var(--secondary);
+    h3{
+      font-size: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .content{
+    display: flex;
+    flex-flow: column;
+
+    .orderId{
+      font-size: 12.743px;
+      color: var(--secondary);
+      align-self: flex-end;
+      padding: 15px 17px 22px 0;
+    }
+
+    .userDetails{
+      display: flex;
+      flex-flow: column;
+      margin-left: 14px;
+      gap: 6px;
+      margin-bottom: 20px;
+
+      .name{
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .address{
+        font-size: 13px;
+        color: var(--text-dark);
+        width: 110px;
+      }
+    }
+
+    .orders{
+      margin-top: 12px;
+      padding: 0 17px 0 14px;
+      height: 55px;
+      border-bottom: 1px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      .image{
+        height: 100%;
+        aspect-ratio: 1/1;
+      }
+      .orderDetails{
+        h5{
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 1.118px;
+        }
+        span{
+          font-size: 11.5px;
+          font-weight: 400;
+          color: var(--text-primary);
+        }
+      }
+      .priceDetails{
+        width: 60px;
+        margin-left: auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        
+        span{
+          font-size: 9.5px;
+          letter-spacing: 0.7px;
+        }
+
+        h5{
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+  .footer{
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secondary);
+    color: var(--text-lightest);
+    padding: 0 17px 0 14px;
+
+    h5{
+      font-size: 15.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.163px;
+    }
+
+    .totalPrice{
+      font-size: 18.509px;
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: $br-small) {
+    .content{
+      .orderId{
+        font-size: 16px;
+        padding: 20px 24px 26px 0;
+      }
+  
+      .userDetails{
+        padding: 0 24px 0 20px;
+        .name{
+          font-size: 26px;
+        }
+  
+        .address{
+          font-size: 18px;
+          color: var(--text-dark);
+          width: 160px;
+        }
+      }
+  
+      .orders{
+        height: 80px;
+        gap: 6px;
+        padding: 0 24px 0 20px;
+        .orderDetails{
+          h5{
+            font-size: 20px;
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+        .priceDetails{
+          width: 120px;
+          span{
+            font-size: 14px;
+          }
+          h5{
+            font-size: 21px;
+          }
+        }
+      }
+    }
+    .footer{
+      height: 62px;
+      padding: 0 24px 0 20px;
+  
+      h5{
+        font-size: 20px;
+      }
+  
+      .totalPrice{
+        font-size: 24px;
+      }
+    }
+  }
+}

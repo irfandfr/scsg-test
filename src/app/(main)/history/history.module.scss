@@ -1,0 +1,32 @@
+@import '@/component/style/config.module.scss';
+
+.backIcon{
+  height: 59px;
+  margin-left: -(59px/2);
+  margin-bottom: 20px;
+}
+
+.waButton.waButton{
+  width: 100%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-top: 35px;
+  letter-spacing: 1.163px;
+  font-size: 15.508px;
+  padding: 0 20px;
+
+  .icon{
+    width: 34px;
+    margin-right: 11px;
+  }
+}
+
+@media screen and (min-width: $br-small) {
+  .history.history{
+    width: $br-small;
+
+    .waButton{
+      font-size: 20px;
+    }
+  }
+}

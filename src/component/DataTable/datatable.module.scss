@@ -1,0 +1,21 @@
+.dataTableContainer{
+  width: 100%;
+  padding: 15px 25px;
+
+  .wrapper{
+    overflow: auto;
+  }
+  .dataTable{
+    width: 100%;
+    color: var(--text-dark);
+    font-weight: 500;
+
+    .header{
+      text-transform:capitalize;
+    }
+
+    .item{
+      padding: 15px 26px;
+    }
+  }
+}

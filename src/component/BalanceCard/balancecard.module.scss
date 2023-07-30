@@ -1,0 +1,72 @@
+@import '@/component/style/config.module.scss';
+
+.balanceCard{
+  width: 100%;
+  height: 167px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 4px 4px 0px #D7EAF4;
+  position: relative;
+  overflow: hidden;
+
+  .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding: 17px;
+  }
+
+  .belaundryOverlay{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    left: calc(94px - 139px);
+    top: calc(92px - 139px);
+
+    .circle1{
+      height: 139px;
+      width: 139px;
+      border-radius: 200px;
+      background: var(--secondary);
+    }
+    .circle2{
+      height: 29px;
+      width: 29px;
+      border-radius: 40px;
+      background: var(--danger);
+      margin-bottom: 39px;
+      margin-left: 9px;
+    }
+  }
+
+  .details{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    h5{
+      font-size: 19px;
+      color: var(--text-dark);
+    }
+    h3{
+      font-size: 36.5px;
+      font-weight: 700;
+      color: var(--secondary)
+    }
+  }
+
+  @media screen and (min-width: $br-small) {
+    max-width: 450px;
+    height: 214px;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
