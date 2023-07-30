@@ -9,3 +9,13 @@ export interface ReportProps{
   total: number
   income: string
 }
+
+export interface ProductProp{
+  name: string 
+  description : string
+  sku: string
+  stock: number
+  category_id: undefined | number
+  price: number
+  image: string
+}
