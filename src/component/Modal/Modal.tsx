@@ -8,10 +8,11 @@ import styles from './modal.module.scss'
 interface ModalProp {
   show: boolean;
   children: React.ReactNode
+  className?: string
   closeModal: () => void
 }
 
-export default function Modal({ show, children, closeModal }: ModalProp) {
+export default function Modal({ show, children, closeModal, className }: ModalProp) {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -30,8 +31,8 @@ export default function Modal({ show, children, closeModal }: ModalProp) {
   }
   if(show){
     return (
-      <dialog className={styles.modalContainer} ref={cardRef}>
-        <AdminCard className={styles.modalCard}>
+      <dialog className={`${styles.modalContainer} ${className}`} ref={cardRef}>
+        <AdminCard className={`${styles.modalCard}`}>
           <button className={styles.closeBtn} onClick={cleanModal}>❌</button>
           {children}
         </AdminCard>

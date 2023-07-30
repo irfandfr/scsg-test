@@ -1,0 +1,48 @@
+.imageUploadContainer{
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .image{
+    width: 171px;
+    aspect-ratio: 1/1;
+    background-size: contain;
+  }
+
+  .imagePreview{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--light);
+    border-radius: 6px;
+    padding: 10px;
+    transition: filter ease-in-out 0.15s;
+
+    &:hover{
+      filter: brightness(80%)
+    }
+    &:focus-visible{
+      outline: solid 2px black;
+    }
+  }
+  .text{
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration-line: underline;
+    color: var(--text-primary)
+  }
+}
+
+.uploadModal{
+  padding-top: 20px;
+
+  label{
+    display: block;
+    color: var(--text-primary);
+    font-size: 18.058px;
+    margin-bottom: 9.5px;
+  }
+}
