@@ -20,7 +20,7 @@ export default function ImageUpload({value, onChange, error} : ImageUploadProp){
   const [imageLink, setImageLink] = useState({link:'', error:''})
 
   function getImageLink(){
-    if(!!value){
+    if(typeof value === 'string'){
       return value
     }else{
       return activeLink
