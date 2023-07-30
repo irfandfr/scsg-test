@@ -1,0 +1,30 @@
+.label{
+    display: block;
+    color: var(--text-primary);
+    font-size: 18.058px;
+    margin-bottom: 9.5px;
+}
+
+.categoryContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 20px;
+  .tags{
+    flex-shrink: 0;
+    height: 49px;
+    background: var(--accent);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 8px;
+    transition: all ease-in-out 0.15s;
+
+    &.active{
+      background: var(--navbar-bg);
+      color: var(--text-lightest);
+      filter: drop-shadow(0px 4px 4px rgba(59, 151, 203, 0.29));
+    }
+  }
+}
