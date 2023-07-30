@@ -23,7 +23,11 @@ export default function SalesTable() {
     AxiosGetWithToken("/platform/product/report")
     .then((res) => {
       if (res.status === 200) {
-        setSalesList([...res.data].reverse());
+        if(typeof res.data === 'string'){
+          setError("Sorry, theres something wrong! " + res.data);
+        }else{
+          setSalesList([...res.data].reverse());
+        }
       } else {
         setError("Sorry, theres something wrong! Error Status:" + res.status);
       }
