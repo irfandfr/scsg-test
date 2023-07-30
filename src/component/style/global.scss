@@ -11,6 +11,7 @@ $br-small: 768px;
   //Z-INDEXES
   --z-header: 10;
   --z-nav-links: 8;
+  --z-modal: 30;
 
   // COLOR VARIABLES
   --background: #E7F5FD;
@@ -20,8 +21,10 @@ $br-small: 768px;
   --navbar-bg: #3B97CB;
   --success: #56E4A0;
   --danger: #F36868;
+  --lighter: #F5FCFF;
   --light: #FFFFFF;
 
+  --text-primary: #3B97CB;
   --text-darkest: #000;
   --text-darker: #303030;
   --text-dark: #535353;
@@ -53,6 +56,11 @@ a {
 button{
   all: unset;
   cursor: pointer;
+}
+
+.link{
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 //hide element on medium or higher screen size (higher than 576px)

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import AdminCard from "@/component/AdminCard/AdminCard";
 import BarChart from "@/component/BarChart/BarChart";
 
-import AxiosGetWithToken from "@/component/utils/axios";
+import {AxiosGetWithToken} from "@/component/utils/axios";
 import { ReportProps } from "@/component/types/types";
 
 import styles from './adminhome.module.scss'

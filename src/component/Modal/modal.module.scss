@@ -1,0 +1,26 @@
+.modalContainer{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(10,10,10, 0.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: 25px;
+
+  .modalCard{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    padding-top: 40px;
+    .closeBtn{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
