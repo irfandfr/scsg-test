@@ -66,3 +66,11 @@ $mobile-image-height: 455px;
   width: 59px;
   left: 59px/2;
 }
+
+.errorPage{
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}

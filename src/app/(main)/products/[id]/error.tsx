@@ -66,7 +66,7 @@ export default function Error({
     }
   }
   return(
-    <MainContainer className={`${styles.productCard} ${styles.errorPage}`}>
+    <MainContainer className={`${styles.errorPage}`}>
       {renderErrorMsg()}
     </MainContainer>
   )
