@@ -10,7 +10,6 @@ npm install
 ```
 Second, go to the `.env` file on root folder and add token info from sign in, on :
 ```
-NEXT_PUBLIC_DB_URL=https://belaundry-api.sebaris.link
 NEXT_PUBLIC_TOKEN={yourSignInToken}
 ```
 
