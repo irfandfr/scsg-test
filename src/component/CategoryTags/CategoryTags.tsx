@@ -7,9 +7,10 @@ interface CategoryTagsProp{
   categories?: {id: number, name: string}[]
   onClick?: (id: number) => void
   className?: string 
+  error?: string
 }
 
-export default function CategoryTags({categories, onClick, className} : CategoryTagsProp){
+export default function CategoryTags({categories, onClick, className, error} : CategoryTagsProp){
   const [active, setActive] = useState<undefined|number>()
 
   function onClickTags(id: number){
@@ -17,8 +18,8 @@ export default function CategoryTags({categories, onClick, className} : Category
     onClick && onClick(id)
   }
   return(
-    <>
-      <div className={styles.categoryContainer}>
+    <div className={styles.wrapper}>
+      <div className={`${styles.categoryContainer} ${className}`}>
         {
           categories?.map(category => 
           <button
@@ -30,6 +31,7 @@ export default function CategoryTags({categories, onClick, className} : Category
           </button>)
         }
       </div>
-    </>
+      <label className={styles.errorText}>{error}</label>
+    </div>
   )
 }
