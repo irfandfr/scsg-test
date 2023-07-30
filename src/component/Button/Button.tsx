@@ -7,7 +7,7 @@ interface ButtonProp {
   disabled?: boolean;
   onClick?: () => void;
   href?: string
-  type?: "default" | "danger";
+  type?: "default" | "danger" | "secondary";
   link?: boolean
   style?: React.CSSProperties
 }
@@ -19,13 +19,14 @@ export default function Button({
   href,
   link,
   disabled,
-  style
+  style,
+  type
 }: ButtonProp) {
   if(link){
     return (
       <Link
         href={href ? href : '#'}
-        className={`${styles.button}  ${className} `}
+        className={`${styles.button} ${styles[type ? type : '']} ${className} `}
         style={style}
       >
         {text}
@@ -37,7 +38,7 @@ export default function Button({
         disabled={disabled}
         onClick={onClick}
         style={style}
-        className={`${styles.button}  ${className} `}
+        className={`${styles.button} ${styles[type ? type : '']} ${className} `}
       >
         {text}
       </button>
