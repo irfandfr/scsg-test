@@ -9,10 +9,11 @@ interface ModalProp {
   show: boolean;
   children: React.ReactNode
   className?: string
-  closeModal: () => void
+  closeModal?: () => void
+  noclose?: boolean
 }
 
-export default function Modal({ show, children, closeModal, className }: ModalProp) {
+export default function Modal({ show, children, closeModal, className, noclose }: ModalProp) {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -27,13 +28,13 @@ export default function Modal({ show, children, closeModal, className }: ModalPr
   }
 
   function cleanModal(){
-    closeModal()
+    closeModal && closeModal()
   }
   if(show){
     return (
       <dialog className={`${styles.modalContainer} ${className}`} ref={cardRef}>
         <AdminCard className={`${styles.modalCard}`}>
-          <button className={styles.closeBtn} onClick={cleanModal}>❌</button>
+          {!noclose && <button className={styles.closeBtn} onClick={cleanModal}>❌</button>}
           {children}
         </AdminCard>
       </dialog>
