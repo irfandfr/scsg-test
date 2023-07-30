@@ -1,5 +1,3 @@
-import AdminCard from "@/component/AdminCard/AdminCard";
-import Counter from "@/component/Counter/Counter";
 import ChevronIcon from "@/component/icons/ChevronIcon/ChevronIcon";
 import MainContainer from "@/component/MainContainer/MainContainer";
 import Link from "next/link";
@@ -31,7 +29,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
         <ChevronIcon />
       </Link>
       <ProductDetails data={productData.response}/>
-      <Counter className={styles.counter}/>
+      
     </MainContainer>
   )
 } 
