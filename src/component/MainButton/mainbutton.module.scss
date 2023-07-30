@@ -1,0 +1,25 @@
+.button{
+  display: inline-flex;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: var(--text-lightest);
+  font-weight: 500;
+  font-size: 20px;
+  transition: filter ease-in-out 0.15s;
+
+  &:hover{
+    filter: brightness(90%);
+  }
+  &:focus-visible{
+    outline: 2px solid black;
+  }
+
+  &.danger{
+    background-color: var(--danger);
+  }
+
+}

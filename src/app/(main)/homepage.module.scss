@@ -95,6 +95,16 @@
         background: var(--primary);
         opacity: 0.3;
       }
+
+      &.fail{
+        justify-content: center;
+        text-align: center;
+        span{
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--secondary);
+        }
+      }
     }
   }
   
