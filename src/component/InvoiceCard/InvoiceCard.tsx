@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./invoice.module.scss";
 
 interface InvoicecardProp {
@@ -34,7 +33,7 @@ export default function InvoiceCard({
         {orders.map(({ image, name, quantity, totalPrice }, index) => {
           return (
             <div key={"orders" + index} className={styles.orders}>
-              <Image src={image} alt={name + ' image'} className={styles.image} />
+              <img src={image} alt={name + ' image'} className={styles.image} />
               <div className={styles.orderDetails}>
                 <h5>{name}</h5>
                 <span>Qty: {quantity}</span>
