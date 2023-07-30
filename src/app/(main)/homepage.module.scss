@@ -1,0 +1,122 @@
+@import '@/component/style/config.module.scss';
+
+.homepage{
+  padding-top: 78px!important;
+  overflow: hidden;
+  position:relative;
+  .welcomeText{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-lightest);
+    margin-bottom: 16px;
+  }
+  .section{
+    margin-top: 40px;
+    position: relative;
+    .sectionTitle{
+      color: var(--text-primary);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.206px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    &.product{
+      height: 245px;
+    }
+  }
+
+  .mostOrderedContainer{
+    background-image: url(https://images-ext-2.discordapp.net/external/M9X7BnHKlukTpGBgUyyUfW_sjV8JANqR79-WWJil0R8/https/www.figma.com/file/qPjgycMUWSU9R6TzcqjYiS/image/acbb409ecb20dea313d81fd95b69987161f3bcc6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 214px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    .overlay{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(180deg, rgba(0, 153, 238, 0.00) 0%, #3B97CB 100%);
+      height: 100px;
+      width: 100%;
+      padding: 9px;
+      color: var(--text-lightest);
+
+      h5{
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      span{
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .latestProduct{
+    width: calc(100% + $mobile-padding *2);
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 19px;
+    overflow: auto;
+    left: -($mobile-padding);
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+
+    .skeletonProduct{
+      width: 176px;
+      height: 214px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 12px 9px;
+
+      .bar1{
+        height: 20px;
+        width: 90px;
+        background: var(--primary);
+        opacity: 0.3;
+      }
+      .bar2{
+        height: 36px;
+        width: 140px;
+        background: var(--primary);
+        opacity: 0.3;
+      }
+
+      &.fail{
+        justify-content: center;
+        text-align: center;
+        span{
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+  
+  &::before{
+    position: absolute;
+    width: 567px;
+    height: 404px;
+    content: '';
+    background: var(--danger);
+    border-radius: 100%;
+    left: calc(-567px/2 + 50%);
+    top: (-404px + 255px);
+    z-index: -1;
+  }
+}
