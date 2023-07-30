@@ -26,7 +26,7 @@ export default function ProductCard({id,image,category,name,price, created_at}:P
   }
   return(
     <Link
-      href={`/product/${id}`}
+      href={`/products/${id}`}
       className={styles.productCard}
       style={{backgroundImage :`url(${image})`}}
     >
