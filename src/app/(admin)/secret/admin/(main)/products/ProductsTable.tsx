@@ -1,7 +1,7 @@
 'use client'
 
 import DataTable from "@/component/DataTable/DataTable";
-import AxiosGetWithToken from "@/component/utils/axios";
+import {AxiosGetWithToken} from "@/component/utils/axios";
 import { useEffect, useState } from "react";
 
 interface PartialProductProp{
