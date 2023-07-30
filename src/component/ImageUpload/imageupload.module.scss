@@ -3,6 +3,7 @@
   aspect-ratio: 1/1;
   background: var(--light);
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   .image{
@@ -33,6 +34,11 @@
     font-weight: 700;
     text-decoration-line: underline;
     color: var(--text-primary)
+  }
+  .errorText{
+    color: var(--danger);
+    font-size: 14px;
+    padding: 5px 0 5px 0;
   }
 }
 

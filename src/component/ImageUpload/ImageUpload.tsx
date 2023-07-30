@@ -11,9 +11,10 @@ import styles from './imageupload.module.scss'
 interface ImageUploadProp{
   value?: string;
   onChange?: (link : string) => void;
+  error?: string
 }
 
-export default function ImageUpload({value, onChange} : ImageUploadProp){
+export default function ImageUpload({value, onChange, error} : ImageUploadProp){
   const [activeLink, setActive] = useState('')
   const [modalOpen, setModalOpen] = useState(false)
   const [imageLink, setImageLink] = useState({link:'', error:''})
@@ -51,6 +52,7 @@ export default function ImageUpload({value, onChange} : ImageUploadProp){
         }
         <span className={styles.text}>Upload image here</span>
       </button>
+      <label className={styles.errorText}>{error}</label>
     </div>
   )
 }
