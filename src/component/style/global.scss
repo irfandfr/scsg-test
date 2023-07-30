@@ -58,6 +58,11 @@ button{
   cursor: pointer;
 }
 
+.link{
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 //hide element on medium or higher screen size (higher than 576px)
 .md-hide{
   display: inherit;
