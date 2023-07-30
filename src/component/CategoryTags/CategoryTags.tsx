@@ -4,15 +4,15 @@ import { useState } from 'react'
 import styles from './categorytags.module.scss'
 
 interface CategoryTagsProp{
-  categories?: {id: string, name: string}[]
-  onClick?: (id: string) => void
+  categories?: {id: number, name: string}[]
+  onClick?: (id: number) => void
   className?: string 
 }
 
 export default function CategoryTags({categories, onClick, className} : CategoryTagsProp){
-  const [active, setActive] = useState('')
+  const [active, setActive] = useState<undefined|number>()
 
-  function onClickTags(id: string){
+  function onClickTags(id: number){
     setActive(id)
     onClick && onClick(id)
   }
