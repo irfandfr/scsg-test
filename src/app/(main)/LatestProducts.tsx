@@ -81,7 +81,7 @@ export default function LatestProducts() {
     }else{
       return(
         <div className={`${styles.skeletonProduct} ${styles.fail}`}>
-          <span>Something's wrong: {errorText}</span>
+          <span>Something is wrong: {errorText}</span>
           <MainButton onClick={() => retryFetch()} text={'Retry'} />
         </div>
       )
