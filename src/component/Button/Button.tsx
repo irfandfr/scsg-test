@@ -10,6 +10,7 @@ interface ButtonProp {
   type?: "default" | "danger" | "secondary";
   link?: boolean
   style?: React.CSSProperties
+  children?: React.ReactNode
 }
 
 export default function Button({
@@ -20,7 +21,8 @@ export default function Button({
   link,
   disabled,
   style,
-  type
+  type,
+  children
 }: ButtonProp) {
   if(link){
     return (
@@ -29,7 +31,7 @@ export default function Button({
         className={`${styles.button} ${styles[type ? type : '']} ${className} `}
         style={style}
       >
-        {text}
+        {children ? children : text}
       </Link>
     );
   }else{
@@ -40,7 +42,7 @@ export default function Button({
         style={style}
         className={`${styles.button} ${styles[type ? type : '']} ${className} `}
       >
-        {text}
+        {children ? children : text}
       </button>
     );
   }
