@@ -166,6 +166,7 @@
       height: $header-desktop-height;
       background: var(--light);
       padding: 0 26px 0 $gap-from-navbar;
+      z-index: 1;
 
       h1{
         font-size: 41.549px;
