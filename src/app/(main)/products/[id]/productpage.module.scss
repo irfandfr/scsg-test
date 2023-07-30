@@ -1,7 +1,7 @@
 
 $mobile-image-height: 455px;
 .productContainer{
-  padding-top: $mobile-image-height - 36px;
+  padding-top: $mobile-image-height + 20px;
   .imageContainer{
     position: absolute;
     top: 0;
@@ -53,4 +53,16 @@ $mobile-image-height: 455px;
 
 .productPage.productPage{
   padding: 18px;
+}
+
+.counter{
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.backIcon{
+  position: absolute;
+  z-index: 1;
+  width: 59px;
+  left: 59px/2;
 }

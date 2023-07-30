@@ -23,7 +23,7 @@ export default function Counter({className}: CounterProp){
     <div className={`${styles.counterContainer} ${className}`}>
       <button className={styles.button} onClick={() => count('decrement')}>-</button>
       <div className={styles.counter}>{counter}</div>
-      <button className={styles.button} onClick={() => count('decrement')}>+</button>
+      <button className={styles.button} onClick={() => count('increment')}>+</button>
     </div>
   )
 }
