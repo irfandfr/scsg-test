@@ -1,5 +1,7 @@
 .homepage{
   padding-top: 78px!important;
+  overflow: hidden;
+  position:relative;
   .welcomeText{
     font-size: 22px;
     font-weight: 500;
@@ -15,6 +17,39 @@
       letter-spacing: 1.206px;
       text-transform: uppercase;
       margin-bottom: 12px;
+    }
+  }
+
+  .mostOrderedContainer{
+    background-image: url(https://images-ext-2.discordapp.net/external/M9X7BnHKlukTpGBgUyyUfW_sjV8JANqR79-WWJil0R8/https/www.figma.com/file/qPjgycMUWSU9R6TzcqjYiS/image/acbb409ecb20dea313d81fd95b69987161f3bcc6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 214px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    .overlay{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(180deg, rgba(0, 153, 238, 0.00) 0%, #3B97CB 100%);
+      height: 100px;
+      width: 100%;
+      padding: 9px;
+      color: var(--text-lightest);
+
+      h5{
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      span{
+        font-size: 17px;
+        font-weight: 500;
+      }
     }
   }
   
