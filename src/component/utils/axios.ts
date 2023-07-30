@@ -20,3 +20,13 @@ export async function AxiosPostWithToken(url:string,payload: {[keys:string] : an
     }
   })
 }
+
+export async function AxiosDeleteWithToken(url:string){
+  return axios({
+    method: 'delete',
+    url: process.env.NEXT_PUBLIC_DB_URL+url,
+    headers:{
+      token: process.env.NEXT_PUBLIC_TOKEN
+    }
+  })
+}

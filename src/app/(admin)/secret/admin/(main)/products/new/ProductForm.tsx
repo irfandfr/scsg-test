@@ -40,8 +40,8 @@ const initErrorProduct={
 export default function ProductForm({categories} : ProductFormProp){
   const [productState, setProduct] = useState({...initProduct})
   const [errorState, setError] = useState({...initErrorProduct})
-  const [loadingModal, setModal] = useState(true)
-  const [uploadState, setUploadState] = useState<string|undefined>('Success create new product')
+  const [loadingModal, setModal] = useState(false)
+  const [uploadState, setUploadState] = useState<string|undefined>('')
 
   function handleChangeProduct(
     e: React.ChangeEvent<HTMLInputElement> 
