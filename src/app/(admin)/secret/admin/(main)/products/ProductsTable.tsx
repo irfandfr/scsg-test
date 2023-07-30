@@ -2,6 +2,7 @@
 
 import DataTable from "@/component/DataTable/DataTable";
 import {AxiosGetWithToken} from "@/component/utils/axios";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface PartialProductProp{
@@ -28,7 +29,17 @@ export default function ProductTable(){
       }
     })
   }, [])
-  
+
+  function renderTableItem(product: PartialProductProp, key:string){
+    switch (key) {
+      case 'price':
+        return `$ ${product[key as keyof typeof product].toLocaleString(undefined, {minimumFractionDigits: 2})}`
+      case 'name':
+        return <Link className='link' href={"/secret/admin/products/"+product.id}>{product[key as keyof typeof product]}</Link>
+      default:
+        return product[key as keyof typeof product]
+    }
+  }
 
   return(
     <div>
@@ -40,8 +51,9 @@ export default function ProductTable(){
               <DataTable.Row key={product.id}>
                 {Object.keys(product).map((key,index) =>
                   <DataTable.Item key={'child'+product.id+index}>
-                      {key === 'price' ? `$ ${product[key as keyof typeof product].toLocaleString(undefined, {minimumFractionDigits: 2})}` :
-                      product[key as keyof typeof product]}
+                      {
+                        renderTableItem(product,key)
+                      }
                   </DataTable.Item>
                 )}
               </DataTable.Row>
