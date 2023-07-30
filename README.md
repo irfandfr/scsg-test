@@ -8,7 +8,13 @@ First, run install all necessary packages:
 ```bash
 npm install
 ```
-Second, run the development server:
+Second, go to the `.env` file on root folder and add token info from sign in, on :
+```
+NEXT_PUBLIC_DB_URL=https://belaundry-api.sebaris.link
+NEXT_PUBLIC_TOKEN={yourSignInToken}
+```
+
+Third, run the development server:
 
 ```bash
 npm run dev
