@@ -1,12 +1,14 @@
 'use client'
 
-import { type } from "os"
 import { useState } from "react"
-import TextForm from "../TextForm/TextForm"
 
 import styles from './counter.module.scss'
+interface CounterProp{
+  className? : string
+}
 
-export default function Counter(){
+
+export default function Counter({className}: CounterProp){
   const [counter, setCounter] = useState(0)
   function count(type : 'increment' | 'decrement'){
     if(type === 'increment'){
@@ -18,7 +20,7 @@ export default function Counter(){
     }
   }
   return(
-    <div className={styles.counterContainer}>
+    <div className={`${styles.counterContainer} ${className}`}>
       <button className={styles.button} onClick={() => count('decrement')}>-</button>
       <div className={styles.counter}>{counter}</div>
       <button className={styles.button} onClick={() => count('decrement')}>+</button>
