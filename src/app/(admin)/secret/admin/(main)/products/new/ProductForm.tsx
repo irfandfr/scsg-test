@@ -2,11 +2,14 @@
 
 import Button from '@/component/Button/Button'
 import CategoryTags from '@/component/CategoryTags/CategoryTags'
+import CheckRingIcon from '@/component/icons/CheckRingIcon/CheckRingIcon'
+import CrossRingIcon from '@/component/icons/CrossRingIcon/CrossRingIcon'
 import ImageUpload from '@/component/ImageUpload/ImageUpload'
 import Modal from '@/component/Modal/Modal'
 import Spinner from '@/component/Spinner/Spinner'
 import TextForm from '@/component/TextForm/TextForm'
 import { ProductProp } from '@/component/types/types'
+import { AxiosPostWithToken } from '@/component/utils/axios'
 import { useState } from 'react'
 import styles from './newproduct.module.scss'
 
@@ -38,7 +41,7 @@ export default function ProductForm({categories} : ProductFormProp){
   const [productState, setProduct] = useState({...initProduct})
   const [errorState, setError] = useState({...initErrorProduct})
   const [loadingModal, setModal] = useState(true)
-  const [uploadState, setUploadState] = useState(undefined)
+  const [uploadState, setUploadState] = useState<string|undefined>('Success create new product')
 
   function handleChangeProduct(
     e: React.ChangeEvent<HTMLInputElement> 
@@ -98,12 +101,35 @@ export default function ProductForm({categories} : ProductFormProp){
     return valid
   }
 
+  function postProduct(){
+    AxiosPostWithToken('/platform/product',productState).then( res =>{
+      console.log(res)
+      if(res.status === 200){
+        setUploadState(res.data.message)
+      }else{
+        setUploadState('Error ' + res.status)
+      }
+    }).catch(res => {
+      if(res.statusText !== ''){
+        setUploadState(res.statusText)
+      }else{
+        setUploadState('Error ' + res.status)
+      }
+    })
+  } 
+
   function onSubmit(){
     if(checkValidInputs()){
       setModal(true)
-    }else{
-      console.log('a')
+      postProduct()
     }
+  }
+
+  function resetAll(){
+    setProduct(initProduct);
+    setError(initErrorProduct);
+    setModal(false)
+    setUploadState(undefined)
   }
 
   return(
@@ -141,7 +167,23 @@ export default function ProductForm({categories} : ProductFormProp){
             <>
               <Spinner />
               <span>Publishing new Product</span>
-            </> : <div>a</div>
+            </> : uploadState === "Success create new product" ? 
+            <div className={`${styles.result} ${styles.success}`}>
+              <CheckRingIcon className={styles.icon}/>
+              <span>{uploadState}</span>
+              <div className={styles.modalNavs}>
+                <Button link href={'/secret/admin/products'} type='secondary' text='Back' />
+                <Button text='Publish another asset' onClick={() => resetAll()}/>
+              </div>
+            </div>:
+            <div className={`${styles.result} ${styles.error}`}>
+              <CrossRingIcon className={styles.icon}/>
+              <span>{uploadState}</span>
+              <div className={styles.modalNavs}>
+                <Button type='secondary' text='Back' onClick={() => setModal(false)}/>
+                <Button text='Try Again' />
+              </div>
+            </div>
           }
         </div>
       </Modal>
