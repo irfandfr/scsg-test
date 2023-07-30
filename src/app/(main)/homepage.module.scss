@@ -1,0 +1,31 @@
+.homepage{
+  padding-top: 78px!important;
+  .welcomeText{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-lightest);
+    margin-bottom: 16px;
+  }
+  .section{
+    margin-top: 40px;
+    .sectionTitle{
+      color: var(--text-primary);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.206px;
+      text-transform: uppercase;
+    }
+  }
+  
+  &::before{
+    position: absolute;
+    width: 567px;
+    height: 404px;
+    content: '';
+    background: var(--danger);
+    border-radius: 100%;
+    left: calc(-567px/2 + 50%);
+    top: (-404px + 255px);
+    z-index: -1;
+  }
+}
