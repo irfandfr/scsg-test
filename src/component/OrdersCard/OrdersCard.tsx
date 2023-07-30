@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import NoteIcon from '../icons/NoteIcon/NoteIcon'
 import styles from './orderscard.module.scss'
 
@@ -12,10 +13,10 @@ export default function OrdersCard(){
           <span className={styles.total}>$ {(180).toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
         </div>
       </div>
-      <div className={styles.nav}>
+      <Link href={'/history'} className={styles.nav}>
         <NoteIcon className={styles.icon}/>
         <span>invoice</span>
-      </div>
+      </Link>
     </div>
   )
 }
