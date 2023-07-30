@@ -1,3 +1,5 @@
+@import '@/component/style/config.module.scss';
+
 .backIcon{
   height: 59px;
   margin-left: -(59px/2);
@@ -16,5 +18,15 @@
   .icon{
     width: 34px;
     margin-right: 11px;
+  }
+}
+
+@media screen and (min-width: $br-small) {
+  .history.history{
+    width: $br-small;
+
+    .waButton{
+      font-size: 20px;
+    }
   }
 }

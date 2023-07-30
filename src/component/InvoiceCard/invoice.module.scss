@@ -1,3 +1,5 @@
+@import '@/component/style/config.module.scss';
+
 .invoiceContainer{
   width: 100%;
   background: var(--light);
@@ -111,6 +113,63 @@
     .totalPrice{
       font-size: 18.509px;
       font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: $br-small) {
+    .content{
+      .orderId{
+        font-size: 16px;
+        padding: 20px 24px 26px 0;
+      }
+  
+      .userDetails{
+        padding: 0 24px 0 20px;
+        .name{
+          font-size: 26px;
+        }
+  
+        .address{
+          font-size: 18px;
+          color: var(--text-dark);
+          width: 160px;
+        }
+      }
+  
+      .orders{
+        height: 80px;
+        gap: 6px;
+        padding: 0 24px 0 20px;
+        .orderDetails{
+          h5{
+            font-size: 20px;
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+        .priceDetails{
+          width: 120px;
+          span{
+            font-size: 14px;
+          }
+          h5{
+            font-size: 21px;
+          }
+        }
+      }
+    }
+    .footer{
+      height: 62px;
+      padding: 0 24px 0 20px;
+  
+      h5{
+        font-size: 20px;
+      }
+  
+      .totalPrice{
+        font-size: 24px;
+      }
     }
   }
 }
