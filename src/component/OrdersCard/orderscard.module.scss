@@ -1,0 +1,86 @@
+.orderCard{
+  width: 100%;
+  height: 95px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 8px;
+    background-color: var(--light);
+
+    .image{
+      background-image: url(https://s3-alpha-sig.figma.com/img/ca98/972f/33e4ac78ee008ad03579bbd69cc9ffe3?Expires=1691366400&Signature=XNKI1zIjSxr7uAuUOLVdPAGBfkkLVOO0xjsR~BDrtCG2oWfsgNX7~i8TEK~gmRtTXlmYCL01FCqXCVTUsHp2mwbPQsQI61gyfR9yiQWBI9UO3WGjzYaNePtkXpDtMiRuqgF6FYOdaxxDsdcnfod34tBQ2NL1kRALx6meFcLieZnt-GHyB6S1ddLi1vKErNf8wrybf6PyoB1kabnJEnzcOevm7U1g8hOwrxcU0WuxsPMRG9tVm7b~RZNUsjdnkYzlD8DvvDal6V23g~rkKgRa6jvv8nYR2tjOb3jZeDv7EZlKSchYtQM3WXW7EoBJO-~QJ2rk0PnXyDY~7fURWNlJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+      height: 67px;
+      width: 73px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    
+    .details{
+      display: flex;
+      flex-flow: column;
+      gap: 3px;
+      color: var(--text-dark);
+
+      .name{
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1.175px;
+      }
+
+      .detail{
+        font-size: 10px;
+        letter-spacing: 0.748px;
+      }
+
+      .total{
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+    }
+  }
+  .nav{
+    width: 90px;
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 11px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .icon{
+      height: 46px;
+    }
+
+    span{
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--text-lightest);
+      letter-spacing: 0.783px;
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      background: linear-gradient(137deg, #099DEF 0%, rgba(9, 157, 239, 0.42) 100%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
