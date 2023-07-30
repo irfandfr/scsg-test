@@ -2,6 +2,7 @@ import BalanceCard from '@/component/BalanceCard/BalanceCard'
 import MainContainer from '@/component/MainContainer/MainContainer'
 import OrdersCard from '@/component/OrdersCard/OrdersCard'
 import styles from './homepage.module.scss'
+import LatestProducts from './LatestProducts'
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
             <span>12x | Total of $ {(4000).toLocaleString()}</span>
           </div>
         </div>
+      </section>
+      <section className={`${styles.section} ${styles.product}`}>
+        <h3 className={styles.sectionTitle}>Our Latest Product</h3>
+        <LatestProducts />
       </section>
     </MainContainer>
   )

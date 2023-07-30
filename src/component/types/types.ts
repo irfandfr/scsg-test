@@ -21,7 +21,7 @@ export interface ProductProp{
 }
 
 export interface ProductDataProp{
-  id: string,
+  id: number,
   name: string 
   description : string
   sku: string
