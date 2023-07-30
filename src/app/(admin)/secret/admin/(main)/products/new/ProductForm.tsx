@@ -32,10 +32,10 @@ export default function ProductForm({categories} : ProductFormProp){
       <p className={styles.label}>Price</p>
       <div className={styles.pricePublishWrapper}>
         <TextForm type="number"/>
+        <div className={styles.imageUploadContainer}>
+          <ImageUpload />
+        </div>
         <Button text='Publish' />
-      </div>
-      <div className={styles.imageUploadContainer}>
-        <ImageUpload />
       </div>
     </form>
   )
