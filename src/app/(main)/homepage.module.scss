@@ -1,3 +1,5 @@
+@import '@/component/style/config.module.scss';
+
 .homepage{
   padding-top: 78px!important;
   overflow: hidden;
@@ -10,6 +12,7 @@
   }
   .section{
     margin-top: 40px;
+    position: relative;
     .sectionTitle{
       color: var(--text-primary);
       font-size: 16px;
@@ -17,6 +20,9 @@
       letter-spacing: 1.206px;
       text-transform: uppercase;
       margin-bottom: 12px;
+    }
+    &.product{
+      height: 245px;
     }
   }
 
@@ -49,6 +55,45 @@
       span{
         font-size: 17px;
         font-weight: 500;
+      }
+    }
+  }
+
+  .latestProduct{
+    width: calc(100% + $mobile-padding *2);
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 19px;
+    overflow: auto;
+    left: -($mobile-padding);
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+
+    .skeletonProduct{
+      width: 176px;
+      height: 214px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 12px 9px;
+
+      .bar1{
+        height: 20px;
+        width: 90px;
+        background: var(--primary);
+        opacity: 0.3;
+      }
+      .bar2{
+        height: 36px;
+        width: 140px;
+        background: var(--primary);
+        opacity: 0.3;
       }
     }
   }
